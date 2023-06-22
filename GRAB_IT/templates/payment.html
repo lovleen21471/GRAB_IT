@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%block content %}
+<body style="background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?cs=srgb&dl=pexels-johannes-plenio-1103970.jpg&fm=jpg');">    
+	<h1>Payment Page</h1>
+	<form action="thank" method="post">
+		{% csrf_token %}
+		<label for="cardname">Name on Card:</label>
+		<input type="text" id="cardname" name="cardname" required>
+
+		<label for="cardnumber">Card Number:</label>
+		<input type="text" id="cardnumber" name="cardnumber" required>
+
+		<label for="expmonth">Expiration Month:</label>
+		<input type="text" id="expmonth" name="expmonth" required>
+
+		<label for="expyear">Expiration Year:</label>
+		<input type="text" id="expyear" name="expyear" required>
+
+		<label for="cvv">CVV:</label>
+		<input type="text" id="cvv" name="cvv" required>
+
+		<input type="submit" value="Pay Now">
+	</form>
+
+</body>
+{% endblock %}

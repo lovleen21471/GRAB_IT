@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{%block content %}
+<body style="background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?cs=srgb&dl=pexels-johannes-plenio-1103970.jpg&fm=jpg');">    
+	<h1>Cart</h1>
+    <br>
+    <b>
+        Product Name = Shoes <br>
+        Product quantity = {{result}} <br>
+        Total Price is : ${{final}}
+    </b>
+    <form action ="index2" method ="post" style="color: black;font-size:18px;">
+		{% csrf_token %}
+		<button onclick="myFunction()">Checkout</button>
+	</form> 
+
+</body>
+{% endblock %}
